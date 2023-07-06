@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
@@ -9,9 +9,34 @@ import Card from "react-bootstrap/Card";
 import Data from "../data.json";
 
 const NavBar = () => {
-  const { searchData } = Data;
+  const { searchData, userData, itemData } = Data;
   const [search, setSearch] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
+  const [userList, setUserList] = useState(userData);
   const containerRef = useRef(null);
+
+  useEffect(() => {
+    console.log(searchValue);
+    if (searchValue.length > 0) {
+      let newUserList = userList.filter((user) => {
+        if (
+          user.userName
+            .toLocaleLowerCase()
+            .includes(searchValue.toLocaleLowerCase()) ||
+          user.description
+            .toLocaleLowerCase()
+            .includes(searchValue.toLocaleLowerCase())
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      setUserList(newUserList);
+    } else {
+      setUserList(userData);
+    }
+  }, [searchValue]);
 
   const scrollLeft = () => {
     if (containerRef.current) {
@@ -37,13 +62,18 @@ const NavBar = () => {
             className='logo'
           />
         </Container>
-        <Container className='search_container'>
+        <div
+          className='search_container'
+          tabindex='-1'
+          onFocus={() => setSearch(true)}
+          onBlur={() => setSearch(false)}
+        >
           <InputGroup className='search_group'>
             <Form.Control
               placeholder='Search'
               className='search_input'
-              onFocus={() => setSearch(true)}
-              //   onBlur={() => setSearch(false)}
+              onChange={(e) => setSearchValue(e.target.value)}
+              value={searchValue}
             />
             <Dropdown show={search}>
               <Dropdown.Menu style={{ width: "100%" }}>
@@ -56,12 +86,12 @@ const NavBar = () => {
                     padding: "5px 5px",
                   }}
                 >
-                  <button
+                  <div
                     className='scroll_button'
                     onClick={scrollLeft}
                   >
                     {"<"}
-                  </button>
+                  </div>
                   <div
                     ref={containerRef}
                     className='scroll'
@@ -108,17 +138,113 @@ const NavBar = () => {
                       );
                     })}
                   </div>
-                  <button
+                  <div
                     className='scroll_button'
                     onClick={scrollRight}
                   >
                     {">"}
-                  </button>
+                  </div>
                 </Dropdown.Header>
                 <Dropdown.Divider />
-                <Dropdown.Item>HELLO ADAM</Dropdown.Item>
-                <Dropdown.Item>BOOOO</Dropdown.Item>
+                <div
+                  style={{
+                    display: "flex",
+                    margin: "10px",
+                    flexFlow: "row wrap",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  {userList
+                    .filter((user) => user.live)
+                    .map((user) => {
+                      return (
+                        <Card
+                          style={{
+                            width: "45%",
+                            display: "flex",
+                            margin: "10px 0px",
+                            backgroundColor: "rgb(226, 244, 223)",
+                            border: "none",
+                            boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+                          }}
+                        >
+                          <Card.Img
+                            style={{
+                              height: "2rem",
+                              width: "2rem",
+                              margin: "3px 7px",
+                            }}
+                            src='live.png'
+                          />
+                          <Card.Img
+                            variant='top'
+                            style={{
+                              width: "45%",
+                              margin: "15px auto",
+                              borderRadius: "50%",
+                              boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)",
+                              aspectRatio: "1/1",
+                              objectFit: "cover",
+                            }}
+                            src={user.userName + ".jpg"}
+                          />
+                          <Card.Body>
+                            <Card.Title style={{ textAlign: "center" }}>
+                              {user.userName}
+                            </Card.Title>
+                            <Card.Text style={{ textAlign: "center" }}>
+                              {user.description}
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      );
+                    })}
+                </div>
                 <Dropdown.Divider />
+                <div
+                  style={{
+                    display: "flex",
+                    margin: "10px",
+                    flexFlow: "row wrap",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  {userList.map((user) => {
+                    return (
+                      <Card
+                        style={{
+                          width: "45%",
+                          display: "flex",
+                          margin: "10px 0px",
+                          backgroundColor: "rgb(245, 245, 245)",
+                          border: "none",
+                          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+                        }}
+                      >
+                        <Card.Img
+                          variant='top'
+                          style={{
+                            width: "45%",
+                            margin: "15px auto",
+                            borderRadius: "50%",
+                            boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)",
+                            aspectRatio: "1/1",
+                            objectFit: "cover",
+                          }}
+                          src={user.userName + ".jpg"}
+                        />
+                        <Card.Body>
+                          <Card.Title style={{ textAlign: "center" }}>
+                            {user.userName}
+                          </Card.Title>
+                          <Card.Text style={{ textAlign: "center" }}>
+                            {user.description}
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    );
+                  })}
+                </div>
               </Dropdown.Menu>
             </Dropdown>
             <InputGroup.Text
@@ -131,7 +257,7 @@ const NavBar = () => {
               />
             </InputGroup.Text>
           </InputGroup>
-        </Container>
+        </div>
         <Container
           className='button_container'
           style={{ justifyContent: "flex-end" }}

@@ -16,52 +16,62 @@
     {
       "id": 1,
       "userName": "coffiey",
-      "description": "Sells second-hand gaming equipment and anime merch"
+      "description": "Sells second-hand gaming equipment and anime merch",
+      "live": false
     },
     {
       "id": 2,
       "userName": "johnsmith",
-      "description": "Tech enthusiast and software developer"
+      "description": "Tech enthusiast and software developer",
+      "live": true
     },
     {
       "id": 3,
       "userName": "emilyjones",
-      "description": "Passionate traveler and adventure seeker"
+      "description": "Passionate traveler and adventure seeker",
+      "live": false
     },
     {
       "id": 4,
       "userName": "mikebrown",
-      "description": "Sports enthusiast and fitness trainer"
+      "description": "Sports enthusiast and fitness trainer",
+      "live": false
     },
     {
       "id": 5,
       "userName": "laurawilliams",
-      "description": "Art lover and aspiring painter"
+      "description": "Art lover and aspiring painter",
+      "live": false
     },
     {
       "id": 6,
       "userName": "davidthompson",
-      "description": "Musician and guitar player"
+      "description": "Musician and guitar player",
+      "live": true
     },
     {
       "id": 7,
       "userName": "sarahwilson",
-      "description": "Foodie and cooking enthusiast"
+      "description": "Foodie and cooking enthusiast",
+      "live": false
     },
     {
       "id": 8,
       "userName": "alexanderlee",
-      "description": "Bookworm and literature lover"
+      "description": "Bookworm and literature lover",
+      "live": true
     },
     {
       "id": 9,
       "userName": "ameliawright",
-      "description": "Nature lover and hiker"
+      "description": "Nature lover and hiker",
+      "live": false
     },
     {
       "id": 10,
-      "userName": "jacksonmiller",
-      "description": "Photographer and visual storyteller"
+      "userName": "jackiemiller",
+      "description": "Photographer and visual storyteller",
+      "live": false
     }
   ],
   "itemData": [

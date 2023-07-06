@@ -52,6 +52,7 @@
 
 .search_container {
   height: 40px;
+  width: 100%;
 }
 
 .search_group {
@@ -89,14 +90,19 @@
 }
 
 .scroll_button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-size: 1.5rem;
   border: none;
-  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); */
   background-color: transparent;
-  padding: 0px;
-  margin-bottom: 0px;
+  padding: 2px;
+  min-height: 40px;
 }
 
 .scroll_button:hover {
+  user-select: none;
+  cursor: pointer;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 2px 4px rgb(226, 244, 223); */
 }
