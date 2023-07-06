@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+.nav {
+  background-color: rgb(233, 224, 224);
+  padding: 0px;
+  height: 50px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  height: 40px;
+  margin: 0px 10px;
+  border-radius: 7px;
+}
+
+.search_container {
+  height: 40px;
+}
+
+.search_group {
+  height: 40px;
+}
+.search_input {
+  height: 40px;
+}
+.search_button {
+  height: 40px;
+}
+.search_img {
+  height: 30px;
+}
+
+.button_container {
+  justify-content: flex-end;
+}
+.nav_button {
+  margin: auto 5px;
+  height: 35px;
+}
+.nav_user {
+  margin: 5px;
+  height: 35px;
+}
