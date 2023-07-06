@@ -5,8 +5,22 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Dropdown from "react-bootstrap/Dropdown";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
+import Card from "react-bootstrap/Card";
 
 const NavBar = () => {
+  const searchData = [
+    { title: "Sneakers", url: "sneakers.jpg" },
+    { title: "Trading Cards", url: "TradingCards.png" },
+    { title: "Toys", url: "toys.jpg" },
+    { title: "Funiture", url: "chair.jpg" },
+    { title: "Retro Games", url: "retroGames.jpg" },
+    { title: "Old Clothes", url: "oldClothes.jpg" },
+    { title: "Streetwear", url: "streetwear.jpg" },
+    { title: "Brands", url: "brand.jpg" },
+    { title: "figurines", url: "figurine.jpg" },
+    { title: "anime", url: "anime.jpg" },
+    { title: "Plants", url: "plant.jpg" },
+  ];
   const [search, setSearch] = useState(false);
   return (
     <>
@@ -30,7 +44,13 @@ const NavBar = () => {
             />
             <Dropdown show={search}>
               <Dropdown.Menu style={{ width: "100%" }}>
-                <Dropdown.Item>HELLO WORLD</Dropdown.Item>
+                {/* <Dropdown.Item>{
+                    searchData.map((catagory) => {
+                        return (
+                            
+                        )
+                    })
+                    }</Dropdown.Item> */}
                 <Dropdown.Item>HELLO ADAM</Dropdown.Item>
                 <Dropdown.Item>BOOOO</Dropdown.Item>
               </Dropdown.Menu>
