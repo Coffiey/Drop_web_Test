@@ -16,7 +16,6 @@ const NavBar = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    console.log(searchValue);
     if (searchValue.length > 0) {
       let newUserList = userList.filter((user) => {
         if (
