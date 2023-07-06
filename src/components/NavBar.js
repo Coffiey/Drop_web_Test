@@ -12,7 +12,6 @@ const NavBar = () => {
   const { searchData } = Data;
   const [search, setSearch] = useState(false);
   const containerRef = useRef(null);
-  console.log(Data);
 
   const scrollLeft = () => {
     if (containerRef.current) {
@@ -75,6 +74,7 @@ const NavBar = () => {
                     {searchData.map((catagory) => {
                       return (
                         <Card
+                          key={catagory.title}
                           style={{
                             display: "flex",
                             Width: "max-content",

@@ -5,11 +5,362 @@
     { "title": "Toys", "url": "toys.jpg" },
     { "title": "Funiture", "url": "chair.jpg" },
     { "title": "Retro Games", "url": "retroGames.jpg" },
-    { "title": "Old Clothes", "url": "oldClothes.jpg" },
+    { "title": "Thift Clothes", "url": "oldClothes.jpg" },
     { "title": "Streetwear", "url": "streetwear.jpg" },
     { "title": "Brands", "url": "brand.jpg" },
     { "title": "figurines", "url": "figurine.jpg" },
     { "title": "anime", "url": "anime.jpg" },
     { "title": "Plants", "url": "plant.jpg" }
+  ],
+  "userData": [
+    {
+      "id": 1,
+      "userName": "coffiey",
+      "description": "Sells second-hand gaming equipment and anime merch"
+    },
+    {
+      "id": 2,
+      "userName": "johnsmith",
+      "description": "Tech enthusiast and software developer"
+    },
+    {
+      "id": 3,
+      "userName": "emilyjones",
+      "description": "Passionate traveler and adventure seeker"
+    },
+    {
+      "id": 4,
+      "userName": "mikebrown",
+      "description": "Sports enthusiast and fitness trainer"
+    },
+    {
+      "id": 5,
+      "userName": "laurawilliams",
+      "description": "Art lover and aspiring painter"
+    },
+    {
+      "id": 6,
+      "userName": "davidthompson",
+      "description": "Musician and guitar player"
+    },
+    {
+      "id": 7,
+      "userName": "sarahwilson",
+      "description": "Foodie and cooking enthusiast"
+    },
+    {
+      "id": 8,
+      "userName": "alexanderlee",
+      "description": "Bookworm and literature lover"
+    },
+    {
+      "id": 9,
+      "userName": "ameliawright",
+      "description": "Nature lover and hiker"
+    },
+    {
+      "id": 10,
+      "userName": "jacksonmiller",
+      "description": "Photographer and visual storyteller"
+    }
+  ],
+  "itemData": [
+    {
+      "id": 1,
+      "userId": 3,
+      "userName": "emilyjones",
+      "category": "Sneakers",
+      "title": "Blue Converse",
+      "description": "Barely worn in good condition, can ship in original box.",
+      "url": "https://example.com/sneakers-blue-converse.jpg"
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "userName": "mikebrown",
+      "category": "Sneakers",
+      "title": "Nike Air Max",
+      "description": "Classic Nike Air Max sneakers, size 9, black color.",
+      "url": "https://example.com/sneakers-nike-air-max.jpg"
+    },
+    {
+      "id": 3,
+      "userId": 8,
+      "userName": "alexanderlee",
+      "category": "Sneakers",
+      "title": "Adidas Superstar",
+      "description": "Iconic Adidas Superstar sneakers, white with black stripes.",
+      "url": "https://example.com/sneakers-adidas-superstar.jpg"
+    },
+    {
+      "id": 10,
+      "userId": 1,
+      "userName": "coffiey",
+      "category": "Trading Cards",
+      "title": "Pokémon TCG",
+      "description": "Rare Pokémon trading card collection, 50 cards.",
+      "url": "https://example.com/trading-cards-pokemon-tcg.jpg"
+    },
+    {
+      "id": 11,
+      "userId": 7,
+      "userName": "sarahwilson",
+      "category": "Trading Cards",
+      "title": "Magic: The Gathering",
+      "description": "Magic: The Gathering card set, includes 100 cards.",
+      "url": "https://example.com/trading-cards-magic-the-gathering.jpg"
+    },
+    {
+      "id": 12,
+      "userId": 9,
+      "userName": "ameliawright",
+      "category": "Trading Cards",
+      "title": "Yu-Gi-Oh! Cards",
+      "description": "Assorted Yu-Gi-Oh! trading cards, includes rare holographics.",
+      "url": "https://example.com/trading-cards-yugioh.jpg"
+    },
+    {
+      "id": 13,
+      "userId": 2,
+      "userName": "johnsmith",
+      "category": "Toys",
+      "title": "LEGO Classic Bricks",
+      "description": "A set of 500 LEGO classic bricks for endless building fun.",
+      "url": "https://example.com/toys-lego-classic-bricks.jpg"
+    },
+    {
+      "id": 14,
+      "userId": 5,
+      "userName": "laurawilliams",
+      "category": "Toys",
+      "title": "Barbie Dreamhouse",
+      "description": "The iconic Barbie Dreamhouse with multiple rooms and accessories.",
+      "url": "https://example.com/toys-barbie-dreamhouse.jpg"
+    },
+    {
+      "id": 15,
+      "userId": 10,
+      "userName": "jacksonmiller",
+      "category": "Toys",
+      "title": "Remote Control Car",
+      "description": "A fast and durable remote control car for racing enthusiasts.",
+      "url": "https://example.com/toys-remote-control-car.jpg"
+    },
+    {
+      "id": 16,
+      "userId": 6,
+      "userName": "davidthompson",
+      "category": "Furniture",
+      "title": "Modern Coffee Table",
+      "description": "A sleek and stylish modern coffee table with a glass top.",
+      "url": "https://example.com/furniture-modern-coffee-table.jpg"
+    },
+    {
+      "id": 17,
+      "userId": 3,
+      "userName": "emilyjones",
+      "category": "Furniture",
+      "title": "Comfortable Armchair",
+      "description": "A comfortable armchair with soft cushions, perfect for relaxation.",
+      "url": "https://example.com/furniture-comfortable-armchair.jpg"
+    },
+    {
+      "id": 18,
+      "userId": 9,
+      "userName": "ameliawright",
+      "category": "Furniture",
+      "title": "Minimalist Bookshelf",
+      "description": "A minimalist bookshelf with clean lines, ideal for organizing your books.",
+      "url": "https://example.com/furniture-minimalist-bookshelf.jpg"
+    },
+    {
+      "id": 19,
+      "userId": 8,
+      "userName": "alexanderlee",
+      "category": "Retro Games",
+      "title": "Super Nintendo Entertainment System",
+      "description": "Classic gaming console with controllers and popular retro games.",
+      "url": "https://example.com/retro-games-super-nintendo.jpg"
+    },
+    {
+      "id": 20,
+      "userId": 5,
+      "userName": "laurawilliams",
+      "category": "Retro Games",
+      "title": "Game Boy Color",
+      "description": "Vintage Game Boy Color with a collection of cartridges.",
+      "url": "https://example.com/retro-games-gameboy-color.jpg"
+    },
+    {
+      "id": 21,
+      "userId": 2,
+      "userName": "johnsmith",
+      "category": "Retro Games",
+      "title": "Sega Genesis",
+      "description": "Sega Genesis console with classic games and controllers.",
+      "url": "https://example.com/retro-games-sega-genesis.jpg"
+    },
+    {
+      "id": 22,
+      "userId": 7,
+      "userName": "sarahwilson",
+      "category": "Old Clothes",
+      "title": "Vintage Denim Jacket",
+      "description": "Stylish vintage denim jacket, perfect for a retro look.",
+      "url": "https://example.com/old-clothes-vintage-denim-jacket.jpg"
+    },
+    {
+      "id": 23,
+      "userId": 10,
+      "userName": "jacksonmiller",
+      "category": "Old Clothes",
+      "title": "Classic Band T-Shirt",
+      "description": "Authentic classic band t-shirt from the 80s, rare collector's item.",
+      "url": "https://example.com/old-clothes-classic-band-tshirt.jpg"
+    },
+    {
+      "id": 24,
+      "userId": 3,
+      "userName": "emilyjones",
+      "category": "Old Clothes",
+      "title": "Vintage Floral Dress",
+      "description": "Elegant vintage floral dress, perfect for special occasions.",
+      "url": "https://example.com/old-clothes-vintage-floral-dress.jpg"
+    },
+    {
+      "id": 25,
+      "userId": 4,
+      "userName": "mikebrown",
+      "category": "Streetwear",
+      "title": "Supreme Hoodie",
+      "description": "Authentic Supreme hoodie, size XL, limited edition.",
+      "url": "https://example.com/streetwear-supreme-hoodie.jpg"
+    },
+    {
+      "id": 26,
+      "userId": 9,
+      "userName": "ameliawright",
+      "category": "Streetwear",
+      "title": "Adidas Originals Track Jacket",
+      "description": "Adidas Originals track jacket, black and white, size M.",
+      "url": "https://example.com/streetwear-adidas-track-jacket.jpg"
+    },
+    {
+      "id": 27,
+      "userId": 5,
+      "userName": "laurawilliams",
+      "category": "Streetwear",
+      "title": "Off-White T-Shirt",
+      "description": "Off-White t-shirt, classic design, available in various sizes.",
+      "url": "https://example.com/streetwear-off-white-tshirt.jpg"
+    },
+    {
+      "id": 28,
+      "userId": 2,
+      "userName": "johnsmith",
+      "category": "Brands",
+      "title": "Apple MacBook Pro",
+      "description": "Latest Apple MacBook Pro, 13-inch, 16GB RAM, 512GB storage.",
+      "url": "https://example.com/brands-macbook-pro.jpg"
+    },
+    {
+      "id": 29,
+      "userId": 7,
+      "userName": "sarahwilson",
+      "category": "Brands",
+      "title": "Rolex Submariner Watch",
+      "description": "Luxurious Rolex Submariner watch, stainless steel, automatic movement.",
+      "url": "https://example.com/brands-rolex-submariner.jpg"
+    },
+    {
+      "id": 30,
+      "userId": 10,
+      "userName": "jacksonmiller",
+      "category": "Brands",
+      "title": "Louis Vuitton Speedy Bag",
+      "description": "Classic Louis Vuitton Speedy bag, monogram canvas, medium size.",
+      "url": "https://example.com/brands-louis-vuitton-speedy.jpg"
+    },
+    {
+      "id": 31,
+      "userId": 8,
+      "userName": "alexanderlee",
+      "category": "Figurines",
+      "title": "Funko Pop! Deadpool",
+      "description": "Funko Pop! vinyl figure of Deadpool, in original packaging.",
+      "url": "https://example.com/figurines-funko-deadpool.jpg"
+    },
+    {
+      "id": 32,
+      "userId": 6,
+      "userName": "davidthompson",
+      "category": "Figurines",
+      "title": "Marvel Legends Iron Man",
+      "description": "Marvel Legends action figure of Iron Man, with multiple accessories.",
+      "url": "https://example.com/figurines-marvel-legends-ironman.jpg"
+    },
+    {
+      "id": 33,
+      "userId": 3,
+      "userName": "emilyjones",
+      "category": "Figurines",
+      "title": "Nendoroid Link",
+      "description": "Nendoroid figure of Link from The Legend of Zelda, with interchangeable parts.",
+      "url": "https://example.com/figurines-nendoroid-link.jpg"
+    },
+    {
+      "id": 34,
+      "userId": 5,
+      "userName": "laurawilliams",
+      "category": "Anime",
+      "title": "Studio Ghibli Collection",
+      "description": "Complete collection of Studio Ghibli movies on Blu-ray.",
+      "url": "https://example.com/anime-studio-ghibli-collection.jpg"
+    },
+    {
+      "id": 35,
+      "userId": 2,
+      "userName": "johnsmith",
+      "category": "Anime",
+      "title": "Dragon Ball Z Action Figures",
+      "description": "Set of Dragon Ball Z action figures, featuring popular characters.",
+      "url": "https://example.com/anime-dragonballz-action-figures.jpg"
+    },
+    {
+      "id": 36,
+      "userId": 10,
+      "userName": "jacksonmiller",
+      "category": "Anime",
+      "title": "Attack on Titan Manga",
+      "description": "Full set of Attack on Titan manga volumes, in excellent condition.",
+      "url": "https://example.com/anime-attack-on-titan-manga.jpg"
+    },
+    {
+      "id": 37,
+      "userId": 3,
+      "userName": "emilyjones",
+      "category": "Plants",
+      "title": "Monstera Deliciosa",
+      "description": "Beautiful Monstera Deliciosa plant, healthy and well-established.",
+      "url": "https://example.com/plants-monstera-deliciosa.jpg"
+    },
+    {
+      "id": 38,
+      "userId": 8,
+      "userName": "alexanderlee",
+      "category": "Plants",
+      "title": "Snake Plant",
+      "description": "Low-maintenance Snake Plant, ideal for indoor environments.",
+      "url": "https://example.com/plants-snake-plant.jpg"
+    },
+    {
+      "id": 39,
+      "userId": 6,
+      "userName": "davidthompson",
+      "category": "Plants",
+      "title": "Bonsai Tree",
+      "description": "Beautiful Bonsai Tree, well-shaped and carefully cultivated.",
+      "url": "https://example.com/plants-bonsai-tree.jpg"
+    }
   ]
 }
