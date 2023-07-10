@@ -22,8 +22,8 @@ function App() {
           element={<Sales />}
         />
         <Route
-          path='/:catagory'
-          element={<Catagory />}
+          path='/:category'
+          element={<Category />}
         />
       </Routes>
     </div>

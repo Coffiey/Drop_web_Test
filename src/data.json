@@ -3,13 +3,13 @@
     { "title": "Sneakers", "url": "sneakers.jpg" },
     { "title": "Trading Cards", "url": "TradingCards.png" },
     { "title": "Toys", "url": "toys.jpg" },
-    { "title": "Funiture", "url": "chair.jpg" },
+    { "title": "Furniture", "url": "chair.jpg" },
     { "title": "Retro Games", "url": "retroGames.jpg" },
-    { "title": "Thift Clothes", "url": "oldClothes.jpg" },
+    { "title": "Thrift Clothes", "url": "oldClothes.jpg" },
     { "title": "Streetwear", "url": "streetwear.jpg" },
     { "title": "Brands", "url": "brand.jpg" },
-    { "title": "figurines", "url": "figurine.jpg" },
-    { "title": "anime", "url": "anime.jpg" },
+    { "title": "Figurines", "url": "figurine.jpg" },
+    { "title": "Anime", "url": "anime.jpg" },
     { "title": "Plants", "url": "plant.jpg" }
   ],
   "userData": [
@@ -214,7 +214,7 @@
       "id": 22,
       "userId": 7,
       "userName": "sarahwilson",
-      "category": "Old Clothes",
+      "category": "Thrift Clothes",
       "title": "Vintage Denim Jacket",
       "description": "Stylish vintage denim jacket, perfect for a retro look.",
       "url": "https://example.com/old-clothes-vintage-denim-jacket.jpg"
@@ -223,7 +223,7 @@
       "id": 23,
       "userId": 10,
       "userName": "jacksonmiller",
-      "category": "Old Clothes",
+      "category": "Thrift Clothes",
       "title": "Classic Band T-Shirt",
       "description": "Authentic classic band t-shirt from the 80s, rare collector's item.",
       "url": "https://example.com/old-clothes-classic-band-tshirt.jpg"
@@ -232,7 +232,7 @@
       "id": 24,
       "userId": 3,
       "userName": "emilyjones",
-      "category": "Old Clothes",
+      "category": "Thrift Clothes",
       "title": "Vintage Floral Dress",
       "description": "Elegant vintage floral dress, perfect for special occasions.",
       "url": "https://example.com/old-clothes-vintage-floral-dress.jpg"

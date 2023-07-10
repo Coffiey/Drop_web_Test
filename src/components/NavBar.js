@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import Data from "../data.json";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const { searchData, userData, itemData } = Data;
@@ -14,6 +15,7 @@ const NavBar = () => {
   const [searchValue, setSearchValue] = useState("");
   const [userList, setUserList] = useState(userData);
   const containerRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (searchValue.length > 0) {
@@ -55,7 +57,10 @@ const NavBar = () => {
         expand='lg'
         className='nav'
       >
-        <Container className='logo_container'>
+        <Container
+          className='logo_container'
+          onClick={() => navigate("/")}
+        >
           <img
             src='drop.png'
             className='logo'
@@ -113,6 +118,9 @@ const NavBar = () => {
                           }}
                         >
                           <Card.Img
+                            onClick={() => {
+                              window.location.href = `/${catagory.title}`;
+                            }}
                             variant='top'
                             style={{
                               width: "50px",
@@ -121,6 +129,7 @@ const NavBar = () => {
                               boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)",
                               aspectRatio: "1/1",
                               objectFit: "cover",
+                              cursor: "pointer",
                             }}
                             src={catagory.url}
                           />
@@ -158,6 +167,10 @@ const NavBar = () => {
                     .map((user) => {
                       return (
                         <Card
+                          onClick={() => {
+                            navigate("/sale");
+                            setSearch(false);
+                          }}
                           style={{
                             width: "45%",
                             display: "flex",
@@ -165,6 +178,7 @@ const NavBar = () => {
                             backgroundColor: "rgb(226, 244, 223)",
                             border: "none",
                             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+                            cursor: "pointer",
                           }}
                         >
                           <Card.Img
@@ -213,6 +227,10 @@ const NavBar = () => {
                     .map((user) => {
                       return (
                         <Card
+                          onClick={() => {
+                            navigate("/sale");
+                            setSearch(false);
+                          }}
                           style={{
                             width: "45%",
                             display: "flex",
@@ -220,6 +238,7 @@ const NavBar = () => {
                             backgroundColor: "rgb(245, 245, 245)",
                             border: "none",
                             boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+                            cursor: "pointer",
                           }}
                         >
                           <Card.Img

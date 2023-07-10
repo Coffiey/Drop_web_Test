@@ -4,8 +4,10 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
+import { useNavigate } from "react-router-dom";
 
 const Homepage = () => {
+  const navigate = useNavigate();
   const { searchData, userData, itemData } = Data;
   const containerRef = useRef(null);
   const firstRef = useRef(null);
@@ -75,6 +77,7 @@ const Homepage = () => {
             {userData.map((user) => {
               return (
                 <Card
+                  onClick={() => navigate("/sale")}
                   style={{
                     margin: "10px",
                     minWidth: "200px",
@@ -83,6 +86,7 @@ const Homepage = () => {
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     borderRadius: "20px",
+                    cursor: "pointer",
                   }}
                 >
                   <Card.Title
@@ -131,11 +135,15 @@ const Homepage = () => {
                   }
                 >
                   <Card
+                    onClick={() => {
+                      window.location.href = `/${item.category}`;
+                    }}
                     style={{
                       margin: "10px",
                       minWidth: "200px",
                       borderRadius: "20px",
                       boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)",
+                      cursor: "pointer",
                     }}
                   >
                     <div
@@ -203,11 +211,15 @@ const Homepage = () => {
                   }
                 >
                   <Card
+                    onClick={() => {
+                      window.location.href = `/${item.category}`;
+                    }}
                     style={{
                       margin: "10px",
                       minWidth: "200px",
                       borderRadius: "20px",
                       boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)",
+                      cursor: "pointer",
                     }}
                   >
                     <div
@@ -271,16 +283,19 @@ const Homepage = () => {
                   }
                 >
                   <Card
+                    onClick={() => {
+                      window.location.href = `/${item.category}`;
+                    }}
                     style={{
                       margin: "10px",
                       minWidth: "200px",
                       borderRadius: "20px",
                       boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)",
+                      cursor: "pointer",
                     }}
                   >
                     <div
                       style={{
-                        // minWidth: "150px",
                         minHeight: "150px",
                         backgroundColor: "white",
                         display: "flex",
@@ -293,7 +308,6 @@ const Homepage = () => {
                         variant='top'
                         style={{
                           margin: "auto",
-                          //   maxWidth: "100%",
                           maxHeight: "99%",
                         }}
                         src={item.userName + item.id + ".jpg"}
