@@ -119,7 +119,8 @@ const NavBar = () => {
                         >
                           <Card.Img
                             onClick={() => {
-                              window.location.href = `/${catagory.title}`;
+                              navigate(`/${catagory.catagory}`);
+                              setSearch(false);
                             }}
                             variant='top'
                             style={{

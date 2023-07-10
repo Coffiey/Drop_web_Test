@@ -136,7 +136,7 @@ const Homepage = () => {
                 >
                   <Card
                     onClick={() => {
-                      window.location.href = `/${item.category}`;
+                      navigate(`/${item.category}`);
                     }}
                     style={{
                       margin: "10px",
@@ -212,7 +212,7 @@ const Homepage = () => {
                 >
                   <Card
                     onClick={() => {
-                      window.location.href = `/${item.category}`;
+                      navigate(`/${item.category}`);
                     }}
                     style={{
                       margin: "10px",
@@ -284,7 +284,7 @@ const Homepage = () => {
                 >
                   <Card
                     onClick={() => {
-                      window.location.href = `/${item.category}`;
+                      navigate(`/${item.category}`);
                     }}
                     style={{
                       margin: "10px",
