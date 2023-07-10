@@ -208,41 +208,43 @@ const NavBar = () => {
                     justifyContent: "space-around",
                   }}
                 >
-                  {userList.map((user) => {
-                    return (
-                      <Card
-                        style={{
-                          width: "45%",
-                          display: "flex",
-                          margin: "10px 0px",
-                          backgroundColor: "rgb(245, 245, 245)",
-                          border: "none",
-                          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-                        }}
-                      >
-                        <Card.Img
-                          variant='top'
+                  {userList
+                    .filter((user) => !user.live)
+                    .map((user) => {
+                      return (
+                        <Card
                           style={{
                             width: "45%",
-                            margin: "15px auto",
-                            borderRadius: "50%",
-                            boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)",
-                            aspectRatio: "1/1",
-                            objectFit: "cover",
+                            display: "flex",
+                            margin: "10px 0px",
+                            backgroundColor: "rgb(245, 245, 245)",
+                            border: "none",
+                            boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
                           }}
-                          src={user.userName + ".jpg"}
-                        />
-                        <Card.Body>
-                          <Card.Title style={{ textAlign: "center" }}>
-                            {user.userName}
-                          </Card.Title>
-                          <Card.Text style={{ textAlign: "center" }}>
-                            {user.description}
-                          </Card.Text>
-                        </Card.Body>
-                      </Card>
-                    );
-                  })}
+                        >
+                          <Card.Img
+                            variant='top'
+                            style={{
+                              width: "45%",
+                              margin: "15px auto",
+                              borderRadius: "50%",
+                              boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)",
+                              aspectRatio: "1/1",
+                              objectFit: "cover",
+                            }}
+                            src={user.userName + ".jpg"}
+                          />
+                          <Card.Body>
+                            <Card.Title style={{ textAlign: "center" }}>
+                              {user.userName}
+                            </Card.Title>
+                            <Card.Text style={{ textAlign: "center" }}>
+                              {user.description}
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      );
+                    })}
                 </div>
               </Dropdown.Menu>
             </Dropdown>
