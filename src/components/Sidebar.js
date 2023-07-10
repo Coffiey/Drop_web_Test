@@ -2,8 +2,10 @@ import Data from "../data.json";
 import ListGroup from "react-bootstrap/ListGroup";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
   const { searchData, userData, itemData } = Data;
 
   return (
@@ -16,6 +18,7 @@ const Sidebar = () => {
           return (
             <ListGroup.Item
               action
+              onClick={() => navigate("/sale")}
               style={{
                 display: "flex",
                 justifyContent: "space-between",
