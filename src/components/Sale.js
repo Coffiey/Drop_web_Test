@@ -4,6 +4,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Data from "../data.json";
+import Card from "react-bootstrap/Card";
+import ListGroup from "react-bootstrap/ListGroup";
 
 const Sales = () => {
   const { searchData, userData, itemData } = Data;
@@ -77,15 +79,17 @@ const Sales = () => {
         style={{
           width: "70%",
           minWidth: "500px",
-          backgroundColor: "teal",
+          //   backgroundColor: "teal",
           opacity: "0.5",
           margin: "10px 10px",
         }}
       >
         <div
           style={{
-            backgroundColor: "blue",
+            boxShadow: " 0px 2px 4px rgba(0, 0, 0, 1)",
             display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
             width: "96%",
             minHeight: "400px",
             minWidth: "500px",
@@ -93,19 +97,77 @@ const Sales = () => {
             margin: "20px",
           }}
         >
+          <div
+            style={{
+              marginLeft: "10px",
+              backgroundColor: "white",
+              border: "2px solid black",
+              display: "flex",
+              justifyContent: "center",
+              width: "350px",
+              height: "350px",
+              background: `url(${
+                itemData[0].userName + itemData[0].id + ".jpg"
+              })`,
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "contain",
+            }}
+          ></div>
           <div>
-            <img src={itemData[0].userName + itemData[0].id + ".jpg"} />
+            <Card
+              style={{ width: "18rem", height: "350px", marginRight: "30px" }}
+            >
+              <Card.Body>
+                <Card.Title>{itemData[0].title}</Card.Title>
+              </Card.Body>
+              <ListGroup className='list-group-flush'>
+                <ListGroup.Item>
+                  <img
+                    src={itemData[0].category + ".jpg"}
+                    style={{
+                      borderRadius: "50%",
+                      height: "1.5em",
+                    }}
+                  />
+                  {"  "}
+                  {itemData[0].category}
+                </ListGroup.Item>
+                <ListGroup.Item>User: {itemData[0].userName}</ListGroup.Item>
+              </ListGroup>
+              <Card.Text>{itemData[0].description}</Card.Text>
+              <Card.Body></Card.Body>
+            </Card>
           </div>
           <div>
-            <div style={{ color: "white" }}>{itemData[0].title}</div>
-            <div>{itemData[0].category}</div>
-            <div>{itemData[0].userName}</div>
-            <div>{itemData[0].description}</div>
+            <Card
+              style={{
+                width: "18rem",
+                height: "350px",
+                marginLeft: "auto",
+                marginRight: "20px",
+              }}
+            >
+              <Card.Body>
+                <Card.Title>Current Bid</Card.Title>
+                <Card.Title>
+                  ¥{Math.floor(Math.random() * 9000) + 1000}
+                </Card.Title>
+                <Card.Text>You have 45 seconds to bid</Card.Text>
+                <Button variant='primary'>Place Bid</Button>
+              </Card.Body>
+              <ListGroup className='list-group-flush'>
+                <ListGroup.Item>Reserve had been met</ListGroup.Item>
+              </ListGroup>
+              <Card.Body>
+                <Card.Link>Shipping to be arranged</Card.Link>
+              </Card.Body>
+            </Card>
           </div>
         </div>
         <div
           style={{
-            backgroundColor: "red",
+            boxShadow: " 0px 2px 4px rgba(0, 0, 0, 1)",
             width: "96%",
             minWidth: "500px",
             margin: "20px",
