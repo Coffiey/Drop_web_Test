@@ -3,6 +3,8 @@ import NavBar from "./components/NavBar";
 import Sales from "./components/Sale";
 import Sidebar from "./components/Sidebar";
 import Homepage from "./components/Homepage";
+import Catagory from "./components/catagory";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -10,8 +12,20 @@ function App() {
     <div className='App'>
       <NavBar />
       <Sidebar />
-      {/* <Homepage /> */}
-      <Sales />
+      <Routes>
+        <Route
+          path='/'
+          element={<Homepage />}
+        />
+        <Route
+          path='/sale'
+          element={<Sales />}
+        />
+        <Route
+          path='/:catagory'
+          element={<Catagory />}
+        />
+      </Routes>
     </div>
   );
 }
