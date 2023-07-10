@@ -119,7 +119,7 @@ const NavBar = () => {
                         >
                           <Card.Img
                             onClick={() => {
-                              navigate(`/${catagory.catagory}`);
+                              navigate(`/${catagory.title}`);
                               setSearch(false);
                             }}
                             variant='top'
